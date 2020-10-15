@@ -122,16 +122,15 @@ namespace ArrayLibrary.Model
 
         public static int FindIndexRowMaxSeriesNumber(int[][] array)
         {
+            int index = -1;
+            
             if (IsNullOrEmpty(array[0]))
             {
-                return -1;
+                return index;
             }
 
             int[][] temp = array;
             SortMatrix(temp);
-            Console.WriteLine(ShowMatrix(temp));
-
-            int index = -1;
             int count = 0;
             int countMax = 1;
 
