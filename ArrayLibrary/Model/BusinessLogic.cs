@@ -124,7 +124,7 @@ namespace ArrayLibrary.Model
         {
             if (IsNullOrEmpty(array[0]))
             {
-                return 0;
+                return -1;
             }
 
             int[][] temp = array;
