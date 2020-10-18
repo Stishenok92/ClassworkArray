@@ -31,7 +31,6 @@ namespace Program.Controller
             int[][] matrix = GetMatrixInitRandom();
             Console.WriteLine();
             Console.WriteLine(ShowMatrix(matrix));
-            Console.WriteLine();
             Console.WriteLine("Number line: " + FindIndexRowMaxSeriesNumber(matrix));
         }
     }

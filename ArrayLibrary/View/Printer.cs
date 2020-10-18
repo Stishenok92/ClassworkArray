@@ -1,5 +1,3 @@
-using System;
-
 namespace ArrayLibrary.View
 {
     public class Printer

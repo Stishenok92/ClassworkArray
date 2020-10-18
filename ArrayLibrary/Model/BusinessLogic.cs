@@ -1,11 +1,10 @@
 using System;
-using static ArrayLibrary.View.Printer;
 
 namespace ArrayLibrary.Model
 {
     public class BusinessLogic
     {
-        private static int MIN_ARRAY_EVEN_INDEX = 2;
+        private const string MSG_ARRAY_IS_NULL = "Error! Array is null!";
 
         private static bool IsNullOrEmpty(int[] array)
         {
@@ -16,6 +15,7 @@ namespace ArrayLibrary.Model
         {
             if (IsNullOrEmpty(array))
             {
+                Console.WriteLine(MSG_ARRAY_IS_NULL);
                 return 0;
             }
 
@@ -31,12 +31,14 @@ namespace ArrayLibrary.Model
 
         public static int CalculateSumBetweenFirstAndLastIndexWithNumberZero(int[] array)
         {
+            int sum = 0;
+            
             if (IsNullOrEmpty(array))
             {
-                return 0;
+                Console.WriteLine(MSG_ARRAY_IS_NULL);
+                return sum;
             }
-
-            int sum = 0;
+            
             int firstIndex = FindFirstIndexWithZero(array);
 
             if (firstIndex != -1)
@@ -126,6 +128,7 @@ namespace ArrayLibrary.Model
             
             if (IsNullOrEmpty(array[0]))
             {
+                Console.WriteLine(MSG_ARRAY_IS_NULL);
                 return index;
             }
 
